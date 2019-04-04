@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Peer Evaluation</title>
+	<style>
+		div {
+			margin-top: 20px;
+			margin-bottom: 20px;	
+		}
+
+		form input, textarea, select {
+			display: block;
+		}
+	</style>
+
+<script>
+function validateForm() {
+    // write code to validate your forms
+	return true;
+}
+</script>
+
+</head>
+<body>
+	<form name="evaluationform" method="POST" action="form_processor.php" onsubmit="return validateForm()">
+		<label>Project name: </label>
+		<input type="text" name="projectname" />
+		<label>Start time: </label>
+		<input type="time" name="starttime" />
+		<label>Stop time: </label>
+		<input type="time" name="stoptime" />
+	
+		<fieldset>
+			<legend>Member 1</legend>	
+			<label>Name: </label>
+			<input type="text" name="members[0][name]" />
+			<label>Participation level: </label>
+			<select name="members[0][participation]">
+				<option value="4">Above and Beyond!</option>
+				<option value="3">Satisfactory</option>
+				<option value="2">Unsatisfactory</option>
+				<option value="1">Absent</option>
+			</select>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Member 2</legend>	
+			<label>Name: </label>
+			<input type="text" name="members[1][name]" />
+			<label>Participation level: </label>
+			<select name="members[1][participation]">
+				<option value="4">Above and Beyond!</option>
+				<option value="3">Satisfactory</option>
+				<option value="2">Unsatisfactory</option>
+				<option value="1">Absent</option>
+			</select>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Member 3</legend>	
+			<label>Name: </label>
+			<input type="text" name="members[2][name]" />
+			<label>Participation level: </label>
+			<select name="members[2][participation]">
+				<option value="4">Above and Beyond!</option>
+				<option value="3">Satisfactory</option>
+				<option value="2">Unsatisfactory</option>
+				<option value="1">Absent</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Member 4</legend>	
+			<label>Name: </label>
+			<input type="text" name="members[3][name]" />
+			<label>Participation level: </label>
+			<select name="members[3][participation]">
+				<option value="4">Above and Beyond!</option>
+				<option value="3">Satisfactory</option>
+				<option value="2">Unsatisfactory</option>
+				<option value="1">Absent</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Member 5</legend>	
+			<label>Name: </label>
+			<input type="text" name="members[4][name]" />
+			<label>Participation level: </label>
+			<select name="members[4][participation]">
+				<option value="4">Above and Beyond!</option>
+				<option value="3">Satisfactory</option>
+				<option value="2">Unsatisfactory</option>
+				<option value="1">Absent</option>
+			</select>
+		</fieldset>
+
+		<label>Notes: </label>
+		<textarea name="notes"></textarea>
+		<label>Overall team grade: </label>
+		<select name="teamgrade">
+			<option value="A+">A+</option>
+			<option value="A">A</option>
+			<option value="A-">A-</option>
+			<option value="B+">B+</option>
+			<option value="B">B</option>
+			<option value="B-">B-</option>
+			<option value="C+">C+</option>
+			<option value="C">C</option>
+			<option value="C-">C-</option>
+			<option value="D+">D+</option>
+			<option value="D">D</option>
+			<option value="F">F</option>
+		</select>
+
+		<input type="submit" value="Submit" />
+
+	</form>
+
+
+
+</body>
+</html>
